@@ -1,4 +1,4 @@
-// Panel sosial media responsif
+// Panel sosmed, bisa dibuka-tutup dari tombol
 
 const navbar = document.querySelector(".navbar");
 const navbarNav = document.querySelector(".navbar-nav");
@@ -953,15 +953,15 @@ if (aboutToggle && aboutDetails) {
     updateAboutState(!currentlyOpen);
   });
 }
-// toggle class active untuk hamburger menu
-// Sudah dideklarasikan di atas
-// ketika hamburger menu di klik
+// Toggle menu hamburger biar nav muncul
+// Variabelnya udah ada di atas
+// Kalau hamburger diklik
 document.querySelector("#hamburger-menu").onclick = (e) => {
   e.preventDefault();
   navbarNav.classList.toggle("active");
 };
 
-// search (minimalist with suggestions)
+// Fitur pencarian menu, ada saran otomatis
 const searchForm = document.querySelector(".search-form");
 const searchBox = document.querySelector("#search-box");
 const searchButton = document.querySelector("#search-button");
@@ -999,7 +999,7 @@ searchClose &&
     closeSearch();
   });
 
-// debounce helper
+// Fungsi debounce biar pencarian nggak berat
 function debounce(fn, wait) {
   let t;
   return function (...args) {
@@ -1021,7 +1021,7 @@ function renderSuggestions(results, query) {
     const li = document.createElement("li");
     li.setAttribute("role", "option");
     li.setAttribute("data-index", i);
-    // Ambil gambar dari menu-card
+    // Ambil gambar dari kartu menu
     const imgEl = r.card.querySelector(".menu-card-img");
     const imgSrc = imgEl ? imgEl.getAttribute("src") : "";
     const imgAlt = imgEl ? imgEl.getAttribute("alt") : "";
@@ -1074,7 +1074,7 @@ searchBox.addEventListener("keydown", function (e) {
   }
 });
 
-// klik di luar untuk menutup nav dan search
+// Klik di luar nav/search buat nutup
 const hm = document.querySelector("#hamburger-menu");
 
 document.addEventListener("click", function (e) {
@@ -1090,7 +1090,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// sosmed feature removed (event handling cleaned up)
+// Fitur sosmed lama udah dihapus, event dibersihin
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
@@ -1112,11 +1112,11 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-// Popup feature removed: popup HTML/CSS/JS cleaned up to avoid affecting other code
+// Popup udah dihapus, kode popup dibersihin biar nggak ganggu
 
 applyAvailabilityBadges();
 
-// Card action handlers: buy and add-to-cart (simple feedback)
+// Event tombol beli & tambah ke keranjang
 document.querySelectorAll(".menu-card").forEach((card) => {
   const buy = card.querySelector(".btn-buy");
   const add = card.querySelector(".add-cart");
@@ -1136,7 +1136,7 @@ document.querySelectorAll(".menu-card").forEach((card) => {
       handleAddToCart(card);
     });
   }
-  // spotlight hover: blur background except this card
+  // Efek spotlight: blur background kecuali kartu ini
   card.addEventListener("mouseenter", () => {
     document.body.classList.add("spotlight");
     card.classList.add("spotlight-active");

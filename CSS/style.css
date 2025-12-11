@@ -1,4 +1,4 @@
-/* Gambar produk di suggestion search */
+/* Buat gambar produk di saran pencarian */
 .suggestion-img-wrap {
   display: inline-block;
   vertical-align: middle;
@@ -11,12 +11,12 @@
   border-radius: 8px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
-/* Hero description color fix */
+/* Warna teks deskripsi hero */
 .hero-desc {
   color: #ffe7b3;
   text-shadow: 0 1px 8px rgba(7, 18, 41, 0.18);
 }
-/* Footer simple layout */
+/* Layout footer sederhana */
 .footer-content {
   display: flex;
   flex-direction: column;
