@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kopi kenangan</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Van<span>Cafe</span>.</a>
+      <div class="navbar-nav">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Hubungi Kami</a>
+        <a href="#sosmed">Sosial Media</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a
+          href="#"
+          id="testimonial-button"
+          aria-label="Lihat testimoni pelanggan"
+        >
+          <i data-feather="star"></i>
+        </a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- search form start -->
+      <div class="search-form" aria-hidden="true">
+        <div class="search-inner">
+          <i class="search-icon" data-feather="search" aria-hidden="true"></i>
+          <input
+            type="search"
+            id="search-box"
+            placeholder="Cari menu, kopi..."
+            autocomplete="off"
+            aria-label="Search"
+          />
+          <button
+            id="search-close"
+            class="search-close"
+            aria-label="Tutup pencarian"
+          >
+            <i data-feather="x"></i>
+          </button>
+        </div>
+        <ul
+          class="search-suggestions"
+          id="search-suggestions"
+          role="listbox"
+          aria-label="Saran pencarian"
+        ></ul>
+      </div>
+      <!-- search form end -->
+
+      <!-- sosmed panel handled below -->
+
+      <!-- cart form start -->
+
+      <!-- cart form start -->
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Sosial Media Panel Start -->
+    <section id="sosmed" class="sosmed-sheet" aria-hidden="true">
+      <div class="sosmed-sheet__overlay" data-close="sosmed"></div>
+      <div
+        class="sosmed-sheet__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sosmed-title"
+      >
+        <header class="sosmed-sheet__header">
+          <div>
+            <p class="sosmed-sheet__eyebrow">Terhubung dengan kami</p>
+            <h3 id="sosmed-title">Sosial Media</h3>
+          </div>
+          <button
+            class="sosmed-sheet__close"
+            id="sosmed-close-btn"
+            aria-label="Tutup panel sosial media"
+            type="button"
+          >
+            <i data-feather="x"></i>
+          </button>
+        </header>
+        <p class="sosmed-sheet__description">
+          Pilih platform favoritmu untuk ngobrol langsung dengan tim VanCafe.
+        </p>
+        <div class="sosmed-sheet__links">
+          <a
+            class="sosmed-pill whatsapp"
+            href="https://wa.me/628123456789"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="sosmed-pill__icon">
+              <img src="img/wa.jpg" alt="" aria-hidden="true" />
+            </span>
+            <span class="sosmed-pill__text">
+              <strong>WhatsApp</strong>
+              <small>Chat instan & order cepat</small>
+            </span>
+            <i data-feather="chevron-right" aria-hidden="true"></i>
+          </a>
+          <a
+            class="sosmed-pill instagram"
+            href="https://instagram.com/your_ig"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="sosmed-pill__icon">
+              <img src="img/ig.jpg" alt="" aria-hidden="true" />
+            </span>
+            <span class="sosmed-pill__text">
+              <strong>Instagram</strong>
+              <small>Lihat story & promo terbaru</small>
+            </span>
+            <i data-feather="chevron-right" aria-hidden="true"></i>
+          </a>
+          <a
+            class="sosmed-pill facebook"
+            href="https://facebook.com/your_fb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="sosmed-pill__icon">
+              <img src="img/fb.jpg" alt="" aria-hidden="true" />
+            </span>
+            <span class="sosmed-pill__text">
+              <strong>Facebook</strong>
+              <small>Ikuti info event komunitas</small>
+            </span>
+            <i data-feather="chevron-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Sosial Media Panel End -->
+
+    <!-- Cart Panel Start -->
+    <section id="cart-panel" class="cart-sheet" aria-hidden="true">
+      <div class="cart-sheet__overlay" data-close="cart"></div>
+      <div
+        class="cart-sheet__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+      >
+        <header class="cart-sheet__header">
+          <div>
+            <p class="cart-sheet__eyebrow">Keranjangmu</p>
+            <h3 id="cart-title">Pesanan Sementara</h3>
+          </div>
+          <button
+            class="cart-sheet__close"
+            id="cart-close-btn"
+            aria-label="Tutup panel keranjang"
+            type="button"
+          >
+            <i data-feather="x"></i>
+          </button>
+        </header>
+        <div class="cart-sheet__body">
+          <ul class="cart-list" id="cart-list" aria-live="polite">
+            <li class="cart-empty" data-empty-state>
+              <div>
+                <strong>Belum ada item.</strong>
+                <p>Pilih menu favoritmu dan klik “Masukan Keranjang”.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="cart-summary" aria-live="polite">
+            <div class="cart-summary__row">
+              <span>Subtotal</span>
+              <strong id="cart-subtotal">Rp 0</strong>
+            </div>
+            <div class="cart-summary__row">
+              <span>Estimasi pajak</span>
+              <span class="cart-muted">Termasuk dalam harga</span>
+            </div>
+            <div class="cart-summary__row">
+              <span>Ongkir</span>
+              <strong id="cart-shipping">Rp 0</strong>
+            </div>
+            <div class="cart-summary__row cart-summary__total">
+              <span>Total</span>
+              <strong id="cart-total">Rp 0</strong>
+            </div>
+          </div>
+        </div>
+        <footer class="cart-sheet__footer">
+          <div class="cart-checkout-grid">
+            <div class="cart-shipping">
+              <label for="cart-shipping-area">Area Pengiriman</label>
+              <select
+                id="cart-shipping-area"
+                aria-label="Pilih area pengiriman"
+              >
+                <option value="CITY">Dalam Kota (+Rp 5.000)</option>
+                <option value="OUTSIDE">Luar Kota (+Rp 10.000)</option>
+              </select>
+              <small>Sesuaikan ongkir sesuai alamat kamu.</small>
+            </div>
+            <div class="cart-payment">
+              <label for="cart-payment-method">Metode Pembayaran</label>
+              <select
+                id="cart-payment-method"
+                aria-label="Pilih metode pembayaran"
+              >
+                <option value="COD">Bayar di Tempat (COD)</option>
+                <option value="DIGITAL">Dompet Digital (Dana/OVO/GoPay)</option>
+                <option value="TRANSFER">Transfer Bank</option>
+              </select>
+              <small>Metode ini akan ikut terkirim ke WhatsApp.</small>
+            </div>
+          </div>
+          <button class="cart-action" type="button" id="cart-checkout-btn">
+            Lanjutkan Pembayaran
+          </button>
+          <p class="cart-note">
+            Ingin pesan banyak? Tulis catatan tambahan saat checkout WhatsApp.
+          </p>
+        </footer>
+      </div>
+    </section>
+    <!-- Cart Panel End -->
+
+    <!-- Testimonial Panel Start -->
+    <section
+      id="testimonial-panel"
+      class="testimonial-sheet"
+      aria-hidden="true"
+    >
+      <div class="testimonial-sheet__overlay" data-close="testimonial"></div>
+      <div
+        class="testimonial-sheet__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="testimonial-title"
+      >
+        <header class="testimonial-sheet__header">
+          <div>
+            <p class="testimonial-sheet__eyebrow">Cerita pelanggan</p>
+            <h3 id="testimonial-title">Testimoni VanCafe</h3>
+          </div>
+          <button
+            class="testimonial-sheet__close"
+            id="testimonial-close-btn"
+            type="button"
+            aria-label="Tutup panel testimoni"
+          >
+            <i data-feather="x"></i>
+          </button>
+        </header>
+        <div class="testimonial-sheet__body">
+          <div class="testimonial-empty" id="testimonial-empty-state">
+            <strong>Belum ada testimoni.</strong>
+            <p>
+              Jadilah yang pertama berbagi pengalaman minum kopi di VanCafe.
+            </p>
+          </div>
+          <ul
+            class="testimonial-list"
+            id="testimonial-list"
+            aria-live="polite"
+          ></ul>
+        </div>
+        <footer class="testimonial-sheet__footer">
+          <form class="testimonial-form" id="testimonial-form">
+            <label class="testimonial-field">
+              <span>Nama</span>
+              <input
+                type="text"
+                id="testimonial-name"
+                name="testimonial-name"
+                placeholder="Nama lengkap"
+                required
+              />
+            </label>
+            <label class="testimonial-field">
+              <span>Rating</span>
+              <select
+                id="testimonial-rating"
+                name="testimonial-rating"
+                required
+              >
+                <option value="5">5 - Luar biasa</option>
+                <option value="4">4 - Sangat baik</option>
+                <option value="3">3 - Cukup</option>
+                <option value="2">2 - Perlu ditingkatkan</option>
+                <option value="1">1 - Kurang puas</option>
+              </select>
+            </label>
+            <label class="testimonial-field">
+              <span>Komentar</span>
+              <textarea
+                id="testimonial-comment"
+                name="testimonial-comment"
+                rows="3"
+                placeholder="Ceritakan pengalamanmu..."
+                required
+              ></textarea>
+            </label>
+            <label class="testimonial-field testimonial-field--file">
+              <span>Foto (opsional)</span>
+              <input
+                type="file"
+                id="testimonial-photo"
+                name="testimonial-photo"
+                accept="image/*"
+              />
+              <small>PNG/JPG maksimal 2MB.</small>
+            </label>
+            <div
+              class="testimonial-photo-preview"
+              id="testimonial-photo-preview"
+              aria-live="polite"
+            >
+              <p>Belum ada foto dipilih.</p>
+            </div>
+            <button type="submit" class="testimonial-submit">
+              Tambah Testimoni
+            </button>
+            <p class="testimonial-hint">
+              Data testimoni hanya disimpan di browser kamu sebagai demo
+              interaktif.
+            </p>
+          </form>
+        </footer>
+      </div>
+    </section>
+    <!-- Testimonial Panel End -->
+
+    <!-- Cart Toast -->
+    <div class="cart-toast" id="cart-toast" role="status" aria-live="polite">
+      <div class="cart-toast__icon" aria-hidden="true">
+        <i data-feather="shopping-bag"></i>
+      </div>
+      <div class="cart-toast__content">
+        <strong>Ditambahkan ke keranjang</strong>
+        <p id="cart-toast-message">Item berhasil ditambahkan.</p>
+      </div>
+    </div>
+
+    <!-- Quantity Modal -->
+    <div class="qty-modal" id="qty-modal" aria-hidden="true">
+      <div class="qty-modal__overlay" data-qty-close></div>
+      <div
+        class="qty-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="qty-modal-title"
+      >
+        <button
+          class="qty-modal__close"
+          type="button"
+          aria-label="Tutup pemilihan jumlah"
+          data-qty-close
+        >
+          <i data-feather="x"></i>
+        </button>
+        <div class="qty-modal__body">
+          <p class="qty-modal__eyebrow">Pesanan instan</p>
+          <h3 id="qty-modal-title">Produk</h3>
+          <p class="qty-modal__price">
+            Harga per item
+            <strong id="qty-modal-price">Rp 0</strong>
+          </p>
+          <div
+            class="qty-modal__control"
+            role="group"
+            aria-label="Pilih jumlah"
+          >
+            <button
+              type="button"
+              class="qty-modal__btn"
+              id="qty-modal-decrease"
+              aria-label="Kurangi jumlah"
+            >
+              -
+            </button>
+            <span class="qty-modal__value" id="qty-modal-qty">1</span>
+            <button
+              type="button"
+              class="qty-modal__btn"
+              id="qty-modal-increase"
+              aria-label="Tambah jumlah"
+            >
+              +
+            </button>
+          </div>
+          <p class="qty-modal__total">
+            Total
+            <strong id="qty-modal-total">Rp 0</strong>
+          </p>
+          <label class="qty-modal__label" for="qty-modal-shipping"
+            >Area Pengiriman</label
+          >
+          <select
+            class="qty-modal__select"
+            id="qty-modal-shipping"
+            aria-label="Pilih area pengiriman"
+          >
+            <option value="CITY">Dalam Kota (+Rp 5.000)</option>
+            <option value="OUTSIDE">Luar Kota (+Rp 10.000)</option>
+          </select>
+          <p class="qty-modal__shipping">
+            Ongkir
+            <strong id="qty-modal-shipping-fee">Rp 0</strong>
+          </p>
+          <p class="qty-modal__grand-total">
+            Grand Total
+            <strong id="qty-modal-grand-total">Rp 0</strong>
+          </p>
+          <label class="qty-modal__label" for="qty-modal-payment"
+            >Metode Pembayaran</label
+          >
+          <select
+            class="qty-modal__select"
+            id="qty-modal-payment"
+            aria-label="Pilih metode pembayaran"
+          >
+            <option value="COD">Bayar di Tempat (COD)</option>
+            <option value="DIGITAL">Dompet Digital (Dana/OVO/GoPay)</option>
+            <option value="TRANSFER">Transfer Bank</option>
+          </select>
+          <button class="qty-modal__action" type="button" id="qty-modal-submit">
+            Pesan via WhatsApp
+          </button>
+          <p class="qty-modal__hint">
+            Setelah menekan tombol di atas kamu akan dialihkan ke WhatsApp untuk
+            konfirmasi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
+        <p class="hero-desc">
+          Hangat, harum, pahit-manis—kopi selalu punya cerita.
+        </p>
+        <a href="#menu" class="cta-simple">Beli Sekarang</a>
+      </main>
+    </section>
+    <!-- hero section end -->
+
+    <!-- about section start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="div row">
+        <div class="about-img">
+          <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Kenapa Memilih Kopi Kami?</h3>
+          <button
+            class="about-toggle"
+            id="about-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="about-story"
+          >
+            Baca cerita kami
+          </button>
+          <div
+            class="about-details is-collapsed"
+            id="about-story"
+            aria-hidden="true"
+          >
+            <p>
+              Di kedai kopi kami, setiap cangkir punya cerita. Kopi yang kami
+              sajikan dipilih langsung dari biji terbaik yang tumbuh di dataran
+              tinggi dengan iklim sempurna. Mulai dari proses pemetikan,
+              pengolahan, sampai pemanggangan, semuanya dilakukan dengan teliti
+              dan hati-hati untuk menjaga karakter rasa yang asli.
+            </p>
+            <p>
+              Selain kualitas, kami juga punya komitmen buat mendukung para
+              petani lokal. Kami bekerja sama secara langsung agar mereka
+              mendapatkan harga yang layak dan tetap menjalankan pertanian ramah
+              lingkungan. Jadi setiap tegukan kopi, bukan cuma soal kenikmatan,
+              tapi juga kontribusi nyata buat komunitas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- menu section start -->
+    <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+      <p>Kopi hangat tersaji, aroma khas menenangkan hati dan pikiran.</p>
+
+      <h3 class="menu-subtitle">Minuman Spesial</h3>
+      <div class="menu-row" data-row="beverage">
+        <div class="menu-row__scroller row beverage-row" data-scrollable>
+          <!-- 15 product cards -->
+          <div class="menu-card">
+            <img
+              src="img/menu/1-card.jpg"
+              alt="Espresso"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Espresso</h3>
+            <p class="menu-card-price">Rp 15.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/2-card.jpg"
+              alt="Americano"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Americano (hot/ice)</h3>
+            <p class="menu-card-price">Rp 15.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/3-card.jpg"
+              alt="Cappuccino"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Cappuccino</h3>
+            <p class="menu-card-price">Rp 20.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/4-card.jpg"
+              alt="Cappuccino"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Caffe Latte</h3>
+            <p class="menu-card-price">Rp 20.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/5-card.jpg"
+              alt="Flat White"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Flat White</h3>
+            <p class="menu-card-price">Rp 20.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/6-card.jpg"
+              alt="Flat White"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Macchiato</h3>
+            <p class="menu-card-price">Rp 20.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/7-card.jpg"
+              alt="Mochaccino"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Mochaccino</h3>
+            <p class="menu-card-price">Rp 25.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img src="img/menu/8-card.jpg" alt="Mocha" class="menu-card-img" />
+            <h3 class="menu-card-title">Magic</h3>
+            <p class="menu-card-price">Rp 25.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/9-card.jpg"
+              alt="Cold Brew"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Cold Brew</h3>
+            <p class="menu-card-price">Rp 20.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/10-card.jpg"
+              alt="Kopi Susu Gula Aren"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Kopi Susu Gula Aren</h3>
+            <p class="menu-card-price">Rp 18.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/11-card.jpg"
+              alt="Vanilla Latte"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Vanilla Latte</h3>
+            <p class="menu-card-price">Rp 25.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/12-card.jpg"
+              alt="Kopi Susu Gula Aren"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Hazelnut Latte</h3>
+            <p class="menu-card-price">Rp 25.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/13-card.jpg"
+              alt="Caramel Latte"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Caramel Latte</h3>
+            <p class="menu-card-price">Rp 25.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/14-card.jpg"
+              alt="Matcha Latte"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Matcha Latte</h3>
+            <p class="menu-card-price">Rp 22.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/15-card.jpg"
+              alt="Affogato"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Affogato</h3>
+            <p class="menu-card-price">Rp 30.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="menu-subtitle">Makanan Ringan</h3>
+      <div class="menu-row" data-row="snack">
+        <div class="menu-row__scroller row snack-row" data-scrollable>
+          <div class="menu-card">
+            <img
+              src="img/menu/snack-croffle.jpg"
+              alt="Croffle"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Croffle</h3>
+            <p class="menu-card-price">Rp 15.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/snack-donut.jpg"
+              alt="Donat"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Donat</h3>
+            <p class="menu-card-price">Rp 10.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/snack-fries.jpg"
+              alt="French Fries"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">French Fries</h3>
+            <p class="menu-card-price">Rp 15.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/snack-tahu.jpg"
+              alt="Tahu Crispy"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Tahu Crispy</h3>
+            <p class="menu-card-price">Rp 12.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+          <div class="menu-card">
+            <img
+              src="img/menu/snack-chicken.jpg"
+              alt="Chicken Popcorn"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Chicken Popcorn</h3>
+            <p class="menu-card-price">Rp 18.000</p>
+            <div class="card-actions">
+              <button class="btn-buy">Beli Sekarang</button>
+              <button
+                class="btn-add add-cart"
+                aria-label="Masukan ke keranjang"
+              >
+                Masukan Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- menu section end -->
+
+    <!-- contact section start -->
+    <section id="contact" class="contact">
+      <h2><span>Hubungi</span> Kami</h2>
+      <p>Hubungi kami kapan saja, layanan ramah selalu siap membantu.</p>
+
+      <div class="contact-grid">
+        <article class="contact-card contact-card--map">
+          <header>
+            <p class="contact-eyebrow">Lokasi & Jam Operasional</p>
+            <h3>Temui Kami di VanCafe</h3>
+            <p>
+              Jalan Mawar No. 21, Pacitan. Buka setiap hari pukul 08.00 - 22.00
+              WIB.
+            </p>
+          </header>
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15796.093105270545!2d111.10492029999999!3d-8.20040905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7961dbfc6ebf67%3A0x716999e2fc55da31!2sRSUD%20dr.%20Darsono%20Pacitan!5e0!3m2!1sid!2sid!4v1764900154770!5m2!1sid!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <ul class="contact-meta">
+            <li>
+              <i data-feather="phone"></i>
+              <div>
+                <span>Telepon</span>
+                <strong>+62 858-9577-9231</strong>
+              </div>
+            </li>
+            <li>
+              <i data-feather="mail"></i>
+              <div>
+                <span>Email</span>
+                <strong>hello@vancafe.id</strong>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="contact-card contact-card--form">
+          <header>
+            <p class="contact-eyebrow">Formulir Cepat</p>
+            <h3>Tinggalkan Pesan</h3>
+            <p>
+              Kirim pertanyaan, kolaborasi, atau pesan pre-order langsung di
+              sini.
+            </p>
+          </header>
+          <form action="" class="contact-form">
+            <label class="contact-field">
+              <span>Nama</span>
+              <input
+                type="text"
+                name="name"
+                placeholder="Tulis nama lengkap"
+                required
+              />
+            </label>
+            <label class="contact-field">
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="nama@email.com"
+                required
+              />
+            </label>
+            <label class="contact-field">
+              <span>Nomor HP</span>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="08xxxxxxxxxx"
+                required
+              />
+            </label>
+            <label class="contact-field">
+              <span>Pesan</span>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Ceritakan kebutuhanmu..."
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="contact-submit">Kirim Pesan</button>
+          </form>
+        </article>
+      </div>
+    </section>
+    <!-- contact section end -->
+
+    <!-- footer start -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-nav">
+          <a href="#home">Beranda</a>
+          <a href="#about">Tentang Kami</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Hubungi Kami</a>
+          <a href="#sosmed">Sosial Media</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+            ><i data-feather="instagram"></i
+          ></a>
+          <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"
+            ><i data-feather="message-circle"></i
+          ></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"
+            ><i data-feather="facebook"></i
+          ></a>
+        </div>
+        <div class="footer-credit">
+          &copy; 2025 VanCafe. Dibuat oleh <a href="">Vynnn</a>.
+          <span class="site-version" aria-label="Versi website"
+            >Versi 0.0.5</span
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- popup removed -->
+
+    <!-- feather icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
